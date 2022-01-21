@@ -3,17 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="stylesheet" href="/css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Practica Bingo by Angela Hill</title>
+    
   </head>
   <body>
-    <div id="app">
-<div id="jugador">carton 1</div>
-      <div id="bingo">
-        <button>Sacar bola</button>
+    <section class="mainContainer">
+
+      <div class="cardsContainer"> 
+        <h2>Player's card</h2>       
+        <div id="playersCard"></div>
       </div>
-      <div id="cpu">carton cpu</div>
-    </div>
+
+      <div class="bingoContainer">
+        <h1>Let's play BINGO!</h1>
+        <div id="showNumber"></div>
+        <button>Call a ball</button>
+      </div>
+
+      <div class="computerContainer">
+        <h2>Computer's card</h2>
+        <div id="computersCard"></div>
+        
+
+      </div>
+      
+      
+    </section>
 
 
 
