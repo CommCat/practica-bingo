@@ -60,6 +60,12 @@
   .tableTitle{
     background: #9b59b6;
   }
+
+  p a {
+    text-decoration: none;
+    color: #380542;
+    font-weight: bold;
+  }
 /*
     #playersCard, #computersCard{ 
       height: 100px;
