@@ -35,39 +35,9 @@
       border: 15px solid #380542; 
       border-radius: 20px;       
   }
-
-  
-
-  #playersCard, #computersCard{
-    margin: 0 auto;
-    text-align: center;
-    width: 400px;
-    height: 400px;
-    /*border-collapse: collapse;*/
-    background: white;
-  }
  
 
-
-  th, td {
-    margin: 0 auto;
-    text-align: center;
-    border: 1px solid #9b59b6;
-    border-radius: 5px;
-    width: 20%;
-    }
-  
-  .tableTitle{
-    background: #9b59b6;
-  }
-
-  p a {
-    text-decoration: none;
-    color: #380542;
-    font-weight: bold;
-  }
-/*
-    #playersCard, #computersCard{ 
+   #playersCard, #computersCard{ 
       height: 100px;
       width: 100px;
       display: flex;
@@ -81,7 +51,7 @@
       background-color: #B0DBDE;
       box-shadow:0px 10px 13px -7px #000000, -1px 24px 18px 12px rgba(0,0,0,0.5);
     }
-    */
+    
 
     #showNumber{
         height: 50px;

@@ -1,0 +1,7 @@
+According to this algorithm we loop the array from back to front. For instance, in the following example, we have an array consisting of 8 elements(A,B,C,D,E,F,G,H) from index 0 to index 7. So the first loop pass will affect the element at the last index 7 that is H.
+Next step is to generate a random number (random index) between the selected index 7 and index 0. Suppose the random index is 3.
+After getting the random index swap the elements that are at the selected index and at the random index. The element at the random index in this  array is D. So after swapping, the array will be changed to A,B,C,H,E,G,F,D. 
+In the second loop the last index is ignored (since it is already been looped) so the random index is between index 0 and index 6 ie elements A and F. E.g this time the generated random index is 2.
+After getting the random index the elements at indexes at 6 and 2 are swapped. Now the array will be A,B,F,H,E,G,C,D.
+This algorithm continues in the same pattern: it ignores index 6 and starts the random index between index 5 and index 0 and so on, until it reaches the index 1. It can't loop index 0  because there are no indexes less than 0 to swap. 
+Note that there is a possibility that the generated random index is the same as the loop index. For instance, if the loop is running between index is 4, then the value at the index 4 will remain at the same position.
