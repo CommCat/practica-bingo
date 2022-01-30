@@ -56,23 +56,20 @@ function pullNumber() {
   const bingoCalledNumber = bingoNumbers.shift();
   drawnNumber.textContent = bingoCalledNumber;
   listNumbers.textContent += `${bingoCalledNumber}`;
-  crossOffNo(bingoCalledNumber);
+  crossOut(bingoCalledNumber);
   }
-/*
-function crossOffNo(number){
-  let crossOff = document.querySelectorAll(`.number${number}`)
+
+function crossOut(bingoCalledNumber){
+  let crossOff = document.querySelectorAll(`.number${bingoCalledNumber}`)
   crossOff.forEach(element =>{
     element.classList.add("crossedOff")
   });
-
-  
-
-  for(let i = 0; i <=15; i++){
-    if (playersArray[i] === number){
+    for(let i = 0; i <=15; i++){
+    if (playersArray[i] === bingoCalledNumber){
       playersCounter++;
       checkWinner(playersCounter, "You're a winner!")
       }
-    if(computersArray[i] === number){
+    if(computersArray[i] === bingoCalledNumber){
       computersCounter++;
       checkWinner(computersCounter, "You're a LOSER!")
       }
@@ -84,6 +81,6 @@ function checkWinner(counter, message){
     //button.remove();
   }
 }
-*/
+
 
 
