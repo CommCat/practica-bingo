@@ -3,74 +3,87 @@ import "../css/style.css";
 
 import { shuffle } from "./utils";
 
+const player = document.querySelector(".playersCard")
+const computer = document.querySelector(".computersCard")
+const button = document.querySelector(".button")
+const drawnNumber = document.querySelector(".callNumber");
+const listNumbers = document.querySelector(".showAll");
 
-//
-const computersBingoCard = [];
-const calledNumbers = [];
-//const allNums = [];
 
-//function createCard() {
-  //creates a new array with 90 undefined elements
-  function range(start, end){
-    return Array(end - start + 1).fill(0).map((x, i) => i + 1);
+let playersCounter = 0;
+let computersCounter = 0;
+
+
+
+
+  const allNums = Array(90)
+    .fill(0)
+    .map((x, i) => i + 1);
+ 
+  const playersArray = shuffle(allNums).slice(0, 15);
+  const computersArray = shuffle(allNums).slice(0, 15);
+  const bingoNumbers = shuffle(allNums)
+
+  console.log(playersArray)
+  console.log(computersArray)
+  console.log(bingoNumbers)
+
+  
+  printArray(playersArray, "player")
+  printArray(computersArray, "computer")
+
+ function printArray(array, type){
+   for(let x = 0; x <=array.length-1; x++){
+     let p = document.createElement("p");
+     p.className = `number number${array[x]}`
+     p.textContent = array[x]
+     let div;
+     if (x <= 4){
+       div = document.querySelector(`.container-line1-${type}`)
+     }else if (x <= 9){
+      div = document.querySelector(`.container-line2-${type}`)
+     }else if (x <= 14){
+      div = document.querySelector(`.container-line3-${type}`)
+     }
+     div.appendChild(p);  
+   }
+ }
+ 
+
+button.addEventListener("click", ()=> pullNumber())
+
+function pullNumber() {
+  const bingoCalledNumber = bingoNumbers.shift();
+  drawnNumber.textContent = bingoCalledNumber;
+  listNumbers.textContent += `${bingoCalledNumber}`;
+  crossOffNo(bingoCalledNumber);
   }
-  const allNums = range(1, 90)
-  console.log(allNums)
-
-  
- function createPlayersCard(){
-  return shuffle(allNums).slice(0, 15);
- }
-console.log(createPlayersCard());
-
-function createComputersCard(){
-  return shuffle(allNums).slice(30, 45);
- }
-console.log(createComputersCard());
-
-
-
- //console.log(allNums);
-
-
- //const playersBingoCard = [allNums.slice(0, 15)]
- //console.log(playersBingoCard)
-    
-  //create new array of first 15 numbers
- // return shuffle(allNums).slice(0, 15);
-  
-
-  //const playersBingoCard = [allNums.slice(0, 15)]
-  //console.log(playersBingoCard);
-
-
-
 /*
-function addNumbersToCard(arrayNumbers) {
-  // aqui gestionamos la logica de pintar el HTML en el DOM
+function crossOffNo(number){
+  let crossOff = document.querySelectorAll(`.number${number}`)
+  crossOff.forEach(element =>{
+    element.classList.add("crossedOff")
+  });
+
+  
+
+  for(let i = 0; i <=15; i++){
+    if (playersArray[i] === number){
+      playersCounter++;
+      checkWinner(playersCounter, "You're a winner!")
+      }
+    if(computersArray[i] === number){
+      computersCounter++;
+      checkWinner(computersCounter, "You're a LOSER!")
+      }
+  }
 }
-
-function changeNumberColour(numero) {}
-
-
-function drawNumber() {
-    const randomNumber = Math.floor(Math.random() * 90) + 1;
-    calledNumbers.push(randomNumber);
-    const showNumber = document.getElementById("showNumber");
-    showNumber.innerHTML = randomNumber
+function checkWinner(counter, message){
+  if(counter === 15){
+    alert(message);
+    //button.remove();
+  }
 }
-
-const draw = document.getElementById("button");
-
-button.addEventListener("click", function(){
-    const draw = drawNumber();
-    return draw;
-    
-    });
-
-    console.log(calledNumbers)
-
-
-
-function checkWinner(bingoCard, calledNumbers) {}
 */
+
+

@@ -23,59 +23,92 @@
   border-radius: 20px;   
   background-color: #e7d4e2;
 }    
-  .cardsContainer, .bingoContainer, .computerContainer{
+  .cardsContainer{
       height: 600px;
-      width: 600px;
+      width: 400px;
       display: flex;
       flex-direction: column;
-      flex-wrap: nowrap;
       justify-content: center;
       align-items: center;
       align-content: center;
       border: 15px solid #380542; 
       border-radius: 20px;       
   }
- 
-
-   #playersCard, #computersCard{ 
-      height: 100px;
-      width: 100px;
-      display: flex;
-      justify-content: center;
-      align-content: center;
-      border: 5px solid #585E66;
-      border-radius: 10px;
-      margin: 50px auto;
-      font-size: 75px;
-      padding: 50px;
-      background-color: #B0DBDE;
-      box-shadow:0px 10px 13px -7px #000000, -1px 24px 18px 12px rgba(0,0,0,0.5);
-    }
-    
-
-    #showNumber{
-        height: 50px;
-        width: 50px;
-        border: 5px solid #380542;
-        border-radius: 10px;
-        margin: 50px auto;
-        font-size: 40px;
-        padding: 50px;
-        background-color: white;
-        /*box-shadow:0px 10px 13px -7px #380542, -1px 24px 18px 12px rgba(0,0,0,0.5);*/
-    }
-   
-    .bingoContainer{    
-      border: none;
-      width: 205px;
+    .cardContainer, .bingo-draw{
+      width: 300px;
     }
 
-    button{
-      background-color: #9b59b6;
-      color: black;
-      font-weight: bold;
-      font-size: 20px;
-      padding: 20px;
-      border: 5px solid #380542;
-      border-radius: 10px;      
+  .playersCard .computersCard{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container-line1-player, .container-line2-player, .container-line3-player, .container-line1-computer, .container-line2-computer, .container-line3-computer{
+    height: 40px;
+    width: 200%;
+    border: 1px solid black;
+    background-color: white;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+  }
+    .number{
+        width: 20%;
+        height: 100%;
+        font-size: 30px;
+        margin-top: 4px;
       }
+/*
+    .bingoContainer{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+}
+*/
+   .numberContainer{
+      /*height: 120px;*/
+      width: 150px;
+      margin-top: 10px;
+      text-align: center;
+      /*border: 1px solid black;
+      border-radius: 35px;
+      background-color: white;*/
+
+      }
+      .callNumber{
+        font-size: 25px;
+        margin-top: 35px;
+      }
+
+      .crossedOff{
+        text-decoration: line-through #9b59b6;
+      }
+
+
+      .buttonContainer button{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: center;
+        background-color: #9b59b6;
+        color: black;
+        font-weight: bold;
+        font-size: 20px;
+        padding: 20px;
+        border: 5px solid #380542;
+        border-radius: 10px;      
+        }
+
+        .showAll{
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          text-align: center;
+          width: 50%   
+        }

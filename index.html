@@ -9,35 +9,36 @@
     
   </head>
   <body>
-
-
-    <section class="mainContainer">
-
+    <div class="mainContainer">
       <div class="cardsContainer"> 
         <h2>Player's card</h2>       
-        <div id="playersCard"></div>
+        <div class="playersCard">
+          <div class="container-line1-player"></div>
+          <div class="container-line2-player"></div>
+          <div class="container-line3-player"></div>
+        </div>
       </div>
-
-      <div class="bingoContainer">
-        <h1>Let's play BINGO!</h1>
-        <div id="showNumber"></div>
-        <button id="button">Draw a ball</button>
+      <div class="cardContainer bingo-draw">
+        <div class="bingoContainer">
+          <h1>Let's play BINGO!</h1> 
+          <div class="numberContainer">
+            <p class="callNumber"></p>
+            <div class = "buttonContainer">           
+             <button class="button">Draw a ball</button>
+          </div>          
+          <div class="showAll"></div>
+          </div> 
+        </div>
       </div>
-
-      <div class="computerContainer">
+      <div class="cardsContainer">
         <h2>Computer's card</h2>
-        <div id="computersCard"> </div>
+        <div class="computersCard">
+          <div class="container-line1-computer"></div>
+          <div class="container-line2-computer"></div>
+          <div class="container-line3-computer"></div>        
+        </div>
       </div>
-    
-      
-      
-    </section>
-
-    
-
- 
-
-
+    </div>
 
     <script type="module" src="./js/main.js"></script>
   
