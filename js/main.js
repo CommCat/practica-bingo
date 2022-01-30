@@ -55,7 +55,7 @@ button.addEventListener("click", ()=> pullNumber())
 function pullNumber() {
   const bingoCalledNumber = bingoNumbers.shift();
   drawnNumber.textContent = bingoCalledNumber;
-  listNumbers.textContent += `${bingoCalledNumber}`;
+  listNumbers.textContent += `  ${bingoCalledNumber}`;
   crossOut(bingoCalledNumber);
   }
 
@@ -78,7 +78,7 @@ function crossOut(bingoCalledNumber){
 function checkWinner(counter, message){
   if(counter === 15){
     alert(message);
-    //button.remove();
+    button.remove();
   }
 }
 

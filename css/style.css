@@ -8,41 +8,40 @@
 }*/
 *{
   font-family: Avenir, Helvetica, Arial, sans-serif;
-}
+ }
 
 .mainContainer{
-  height: 700px;
+  height: 950px;
+  width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-around;
   align-items: center;
   align-content: center;
-  font-family: 'Roboto', sans-serif;
-  border: 1px solid #380542;
+  border: 1px solid #0d2411;
   border-radius: 20px;   
-  background-color: #e7d4e2;
+  background-color: #cbe7d4;
 }    
   .cardsContainer{
       height: 600px;
-      width: 400px;
+      width: 600px;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       align-content: center;
-      border: 15px solid #380542; 
+      border: 15px solid #0d2411; 
       border-radius: 20px;       
   }
-    .cardContainer, .bingo-draw{
-      width: 300px;
-    }
+    
 
-  .playersCard .computersCard{
-    width: 400px;
+  .playersCard, .computersCard{
+    width: 150px;
+    height: 400px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     justify-content: center;
   }
@@ -50,8 +49,8 @@
   .container-line1-player, .container-line2-player, .container-line3-player, .container-line1-computer, .container-line2-computer, .container-line3-computer{
     height: 40px;
     width: 200%;
-    border: 1px solid black;
-    background-color: white;
+    /*border: 5px solid #0d2411;*/
+    background-color: #cbe7d4;
     margin-top: 10px;
     display: flex;
     flex-direction: row;
@@ -64,30 +63,32 @@
         font-size: 30px;
         margin-top: 4px;
       }
-/*
+
     .bingoContainer{
       display: flex;
       flex-direction: column;
       align-items: center;
-}
-*/
+      height: 400px;
+      width: 300px;
+      }
+    .cardContainer, .bingo-draw{
+      width: 300px;
+    }
    .numberContainer{
-      /*height: 120px;*/
-      width: 150px;
+      height: 120px;
+      width: 200px;
       margin-top: 10px;
       text-align: center;
-      /*border: 1px solid black;
-      border-radius: 35px;
-      background-color: white;*/
-
       }
+
       .callNumber{
         font-size: 25px;
         margin-top: 35px;
+        font-weight: bold;
       }
 
       .crossedOff{
-        text-decoration: line-through #470b5f;
+        text-decoration: line-through #f80d0d;
       }
 
 
@@ -96,19 +97,19 @@
         flex-direction: row;
         justify-content: space-between;
         text-align: center;
-        background-color: #9b59b6;
-        color: black;
+        background-color: #5dbd7c;
+        /*color: black;*/
         font-weight: bold;
         font-size: 20px;
         padding: 20px;
-        border: 5px solid #380542;
+        border: 10px solid #0d2411;
         border-radius: 10px;      
         }
 
         .showAll{
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-          text-align: center;
-          width: 50%   
-        }
+          display: inline-block;
+          height: 250px;
+          font-size: 20px; 
+          position: relative;
+          margin: 5px;
+          }
