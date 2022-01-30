@@ -1,2 +1,2 @@
-# practica-bingo
+Basci Bingo game for a course project
 Very basic javascript bingo game with two cards, player's and computer's, created with javascript, css and html. The numbers (15 each) for both cards are drawn from a shuffled and sliced array of numbers from 1-90. Rows on the cards are generated through javascript and the bingo numbers are drawn via a button. The numbers on the cards are crossed out if they match the called bingo numbers. There is an alert at the end of the game to tell the player if they have lost or won. 
