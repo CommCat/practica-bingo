@@ -1,13 +1,14 @@
-/*#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}*/
 *{
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
+ }
+
+ h1{
+   font-size: 35px;
+ }
+
+ h2{
+   font-size: 30px;
  }
 
 .mainContainer{
@@ -21,7 +22,7 @@
   align-content: center;
   border: 1px solid #0d2411;
   border-radius: 20px;   
-  background-color: #cbe7d4;
+  background-color: #e5f3e9;
 }    
   .cardsContainer{
       height: 600px;
@@ -35,7 +36,6 @@
       border-radius: 20px;       
   }
     
-
   .playersCard, .computersCard{
     width: 150px;
     height: 400px;
@@ -49,14 +49,15 @@
   .container-line1-player, .container-line2-player, .container-line3-player, .container-line1-computer, .container-line2-computer, .container-line3-computer{
     height: 40px;
     width: 200%;
-    /*border: 5px solid #0d2411;*/
-    background-color: #cbe7d4;
-    margin-top: 10px;
+    background-color: #e5f3e9;
+    margin-top: 15px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     text-align: center;
+    color:rgb(64, 122, 62);
   }
+
     .number{
         width: 20%;
         height: 100%;
@@ -71,9 +72,11 @@
       height: 400px;
       width: 300px;
       }
+
     .cardContainer, .bingo-draw{
       width: 300px;
     }
+
    .numberContainer{
       height: 120px;
       width: 200px;
@@ -88,9 +91,8 @@
       }
 
       .crossedOff{
-        text-decoration: line-through #f80d0d;
+        text-decoration: line-through #194d2a;
       }
-
 
       .buttonContainer button{
         display: flex;
@@ -98,7 +100,6 @@
         justify-content: space-between;
         text-align: center;
         background-color: #5dbd7c;
-        /*color: black;*/
         font-weight: bold;
         font-size: 20px;
         padding: 20px;
